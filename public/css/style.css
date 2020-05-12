@@ -1,0 +1,46 @@
+
+*{
+  margin:0;
+  padding:0;
+}
+main{
+
+}
+
+header{
+  min-width: 100vh;
+  min-height: 90vh;
+  
+  background-image : url(/public/img/photo-1544739313-3b4137a6541b.jpeg);
+ 
+  background-size: cover ;
+  background-position: center;
+
+}
+.container{
+  width: 1200px;
+  height: 100vh;
+}
+
+
+
+.navUl {
+  position: fixed;
+  top: 35vh;
+  margin-left: 30px;
+  font-family: 'Lobster Two', cursive;
+  font-size: 25Px;
+  color: rgb(5, 5, 5);
+  list-style: none;
+ 
+
+}
+.navUl li a {
+          color: rgb(5, 5, 5);
+
+}
+
+
+
+
+

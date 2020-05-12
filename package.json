@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio de Thibault Gabillard",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "sass": "sass --watch ./public/materialize-src/sass/materialize.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noydono/Portfolio.git"
+  },
+  "author": "Noy_dono",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noydono/Portfolio/issues"
+  },
+  "homepage": "https://github.com/noydono/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "handlebars": "^4.7.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

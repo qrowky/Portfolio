@@ -1,0 +1,24 @@
+.propos--img {
+    position: absolute !important;
+    bottom: 140Px;
+    right: 320px;
+   
+  }
+  .propos--p {
+    position: absolute !important;
+    bottom: 0;
+    right: 50Px;
+    z-index: 10;
+    width: 750px;
+    height: 300px;
+    font-size: 18Px;
+  }
+  .propos--title {
+    position: absolute !important;
+    bottom:370px;
+    right: 240px;
+    z-index: 5;
+    transform: rotate(270deg);
+    font-size: 25px;
+  }
+ 

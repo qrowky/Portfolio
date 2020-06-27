@@ -1,0 +1,46 @@
+
+.Comp--title{
+    
+    position: absolute !important;
+    transform: rotate(90deg);
+    right: 1115px;
+    
+}
+.numerotation{
+    position: absolute;
+    font-size: 10px;
+    transform: rotate(90deg);
+    bottom: 25px;
+    right: 20px;
+    height: 20Px;
+}
+.Comp--node{
+    position: absolute !important;
+    right: 700px;
+}
+.Comp--sass{
+    position: absolute !important; 
+    right: 450px;
+}
+.Comp--express{
+    position: absolute !important;
+    bottom: 240px;
+    
+}
+.Comp--linux{
+    position: absolute !important;
+    right: 700px;
+    opacity: 0;
+}
+.Comp--html{
+    position: absolute !important;
+    bottom: 240px;
+}
+.Comp--git{
+    position: absolute !important; 
+    right: 700px;
+}
+.Comp--mongo{
+    position: absolute !important;
+    right: 150px;
+}

@@ -10,7 +10,19 @@
     <h1 class=" ME teal--text text--lighten-3 mt-5 ml-5 ">
       Gabillard Thibault <span>Développeur junior Fullstack</span>
     </h1>
-
+ <v-alert
+      v-model="alert"
+      border="left"
+      close-text="Close Alert"
+      color="grey lighten-1 grey--text text--darken-4"
+      dark
+      dismissible
+      style="position:absolute;
+       bottom:0;
+       right:0;"
+    >
+      Scroller Pour afficher le contenue
+    </v-alert>
     <!-- //Social -->
     <div class="social d-flex flex-row justify-end mr-12 mt-3">
       <a
@@ -37,7 +49,6 @@
       <div
         @mouseover="showCursor = true"
         @mouseleave="showCursor = false"
-        @click="LinkPropos"
         class="nav--btn--propos"
       >
         A Propos
@@ -47,7 +58,6 @@
       <div
         @mouseover="showCursor = true"
         @mouseleave="showCursor = false"
-        @click="LinkComp"
         class="nav--btn--Comp"
       >
         Compétences
@@ -60,7 +70,6 @@
         <a
           @mouseover="showCursor = true"
           @mouseleave="showCursor = false"
-          @click="LinkTrot"
           v-if="ShowReal"
           class="nav--btn--trot grey--text text--lighten-1"
           >Trot&Go
@@ -71,7 +80,6 @@
         <a
           @mouseover="showCursor = true"
           @mouseleave="showCursor = false"
-          @click="LinkClav"
           v-if="ShowReal"
           class="nav--btn--claviste grey--text text--lighten-1"
           >The Claviste
@@ -81,7 +89,6 @@
       <div
         @mouseover="showCursor = true"
         @mouseleave="showCursor = false"
-        @click="LinkReal"
         class="nav--btn--real"
       >
         Réalisations
@@ -91,7 +98,6 @@
       <div
         @mouseover="showCursor = true"
         @mouseleave="showCursor = false"
-        @click="LinkCont"
         class="nav--btn--cont"
       >
         Me Contacter
@@ -103,31 +109,27 @@
       <propos
         :tick="wheelTick"
         :tickMax="wheelTickMax"
-        :link="linkPropos"
+        
         class="proposComponent"
       />
       <competences
         :tick="wheelTick"
         :tickMax="wheelTickMax"
-        :linkcomp="linkComp"
         class="CompComponent"
       />
       <realisation
         :tick="wheelTick"
         :tickMax="wheelTickMax"
-        :link="linkReal"
         class="realComponent"
       />
       <trot
         :tick="wheelTick"
         :tickMax="wheelTickMax"
-        :link="linkTrot"
         class="trotComponent"
       />
       <contact
         :tick="wheelTick"
         :tickMax="wheelTickMax"
-        :link="linkCont"
         class="contactComponent"
       />
     </v-container>
@@ -159,17 +161,16 @@ export default {
       ShowReal: false,
       showClav: false,
       showTrot: false,
-      linkPropos: false,
-      linkComp: false,
-      linkReal: false,
-      linkClav: false,
-      linkTrot: false,
-      linkCont: false,
+      // linkPropos: false,
+      // linkComp: false,
+      // linkReal: false,
+      // linkClav: false,
+      // linkTrot: false,
+      // linkCont: false,
       xChild: 0,
       yChild: 0,
       xParent: 0,
       yParent: 0,
-      hover: false,
       showCursor: false,
     };
   },
@@ -245,73 +246,73 @@ export default {
         realBtn.style.transition = "2s";
       }
     },
-    LinkPropos() {
-      if (this.linkPropos != true) {
-        this.linkComp = false;
-        this.linkPropos = true;
-        this.linkReal = false;
-        this.linkClav = false;
-        this.linkTrot = false;
-        this.linkCont = false;
-        this.wheelTick = 1;
-      }
-    },
-    LinkComp() {
-      if (this.linkComp != true) {
-        this.linkComp = true;
-        this.linkPropos = false;
-        this.linkReal = false;
-        this.linkClav = false;
-        this.linkTrot = false;
-        this.linkCont = false;
-        this.wheelTick = 6;
-      }
-    },
-    LinkReal() {
-      if (this.linkReal != true) {
-        this.linkComp = false;
-        this.linkPropos = false;
-        this.linkReal = true;
-        this.linkClav = false;
-        this.linkTrot = false;
-        this.linkCont = false;
-        this.wheelTick = 10;
-      }
-    },
-    LinkClav() {
-      if (this.linkClav != true) {
-        this.linkComp = false;
-        this.linkPropos = false;
-        this.linkReal = false;
-        this.linkClav = true;
-        this.linkTrot = false;
-        this.linkCont = false;
-        this.wheelTick = 6;
-      }
-    },
-    LinkTrot() {
-      if (this.linkTrot != true) {
-        this.linkComp = false;
-        this.linkPropos = false;
-        this.linkReal = false;
-        this.linkClav = false;
-        this.linkTrot = true;
-        this.linkCont = false;
-        this.wheelTick = 15;
-      }
-    },
+    // LinkPropos() {
+    //   if (this.linkPropos != true) {
+    //     this.linkComp = false;
+    //     this.linkPropos = true;
+    //     this.linkReal = false;
+    //     this.linkClav = false;
+    //     this.linkTrot = false;
+    //     this.linkCont = false;
+    //     this.wheelTick = 1;
+    //   }
+    // },
+    // LinkComp() {
+    //   if (this.linkComp != true) {
+    //     this.linkComp = true;
+    //     this.linkPropos = false;
+    //     this.linkReal = false;
+    //     this.linkClav = false;
+    //     this.linkTrot = false;
+    //     this.linkCont = false;
+    //     this.wheelTick = 6;
+    //   }
+    // },
+    // LinkReal() {
+    //   if (this.linkReal != true) {
+    //     this.linkComp = false;
+    //     this.linkPropos = false;
+    //     this.linkReal = true;
+    //     this.linkClav = false;
+    //     this.linkTrot = false;
+    //     this.linkCont = false;
+    //     this.wheelTick = 10;
+    //   }
+    // },
+    // LinkClav() {
+    //   if (this.linkClav != true) {
+    //     this.linkComp = false;
+    //     this.linkPropos = false;
+    //     this.linkReal = false;
+    //     this.linkClav = true;
+    //     this.linkTrot = false;
+    //     this.linkCont = false;
+    //     this.wheelTick = 10;
+    //   }
+    // },
+    // LinkTrot() {
+    //   if (this.linkTrot != true) {
+    //     this.linkComp = false;
+    //     this.linkPropos = false;
+    //     this.linkReal = false;
+    //     this.linkClav = false;
+    //     this.linkTrot = true;
+    //     this.linkCont = false;
+    //     this.wheelTick = 15;
+    //   }
+    // },
 
-    LinkCont() {
-      if (this.linkCont != true) {
-        this.linkComp = false;
-        this.linkPropos = false;
-        this.linkReal = false;
-        this.linkClav = false;
-        this.linkTrot = false;
-        this.linkCont = true;
-        this.wheelTick = 20;
-      }
-    },
+    // LinkCont() {
+    //   if (this.linkCont != true) {
+    //     this.linkComp = false;
+    //     this.linkPropos = false;
+    //     this.linkReal = false;
+    //     this.linkClav = false;
+    //     this.linkTrot = false;
+    //     this.linkCont = true;
+    //     this.wheelTick = 20;
+    //   }
+    // },
     moveCursor(e) {
       this.xChild = e.clientX;
       this.yChild = e.clientY;

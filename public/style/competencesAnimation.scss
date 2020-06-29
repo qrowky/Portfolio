@@ -1,0 +1,864 @@
+/*
+ *
+ *    animation
+ *
+ *
+ * * * * * * * */
+.node-enter-active {
+  animation: slide-in-node 1s forwards;
+}
+.node-leave-active {
+  animation: slide-out-node 1s forwards;
+}
+@keyframes slide-in-node {
+  from {
+    right: 100vh;
+    opacity: 0;
+  }
+  to {
+    right: 600px;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-node {
+  from {
+    right: 600px;
+    opacity: 1;
+  }
+  to {
+    right: 100vh;
+    opacity: 0;
+  }
+}
+
+.sass-enter-active {
+  animation: slide-in-sass 1s forwards;
+}
+.sass-leave-active {
+  animation: slide-out-sass 1s forwards;
+}
+@keyframes slide-in-sass {
+  from {
+    right: 0vh;
+    opacity: 0;
+  }
+  to {
+    right: 370px;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-sass {
+  from {
+    right: 370px;
+    opacity: 1;
+  }
+  to {
+    right: 0vh;
+    opacity: 0;
+  }
+}
+
+.html-enter-active {
+  animation: slide-in-html 1s forwards;
+}
+.html-leave-active {
+  animation: slide-out-html 1s forwards;
+}
+@keyframes slide-in-html {
+  from {
+    right: 1200px;
+    opacity: 0;
+  }
+  to {
+    right: 750px;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-html {
+  from {
+    right: 700px;
+    opacity: 1;
+  }
+  to {
+    right: 1200px;
+    opacity: 0;
+  }
+}
+
+.linux-enter-active {
+  animation: slide-in-linux 1s forwards;
+}
+.linux-leave-active {
+  animation: slide-out-linux 1s forwards;
+}
+@keyframes slide-in-linux {
+  from {
+    bottom: 100vh;
+    opacity: 0;
+  }
+  to {
+    bottom: 250px;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-linux {
+  from {
+    bottom: 250px;
+    opacity: 1;
+  }
+  to {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+.express-enter-active {
+  animation: slide-in-express 0.8s forwards;
+}
+.express-leave-active {
+  animation: slide-out-express 0.8s forwards;
+}
+@keyframes slide-in-express {
+  from {
+    right: 0vh;
+    opacity: 0;
+  }
+  to {
+    right: 320px;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-express {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: -100vh;
+    opacity: 0;
+  }
+}
+
+.git-enter-active {
+  animation: slide-in-git 1s forwards;
+}
+.git-leave-active {
+  animation: slide-out-git 1s forwards;
+}
+@keyframes slide-in-git {
+  from {
+    bottom: 0vh;
+    opacity: 0;
+  }
+  to {
+    bottom: 110px;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-git {
+  from {
+    bottom: 110px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0vh;
+    opacity: 0;
+  }
+}
+
+.mongo-enter-active {
+  animation: slide-in-mongo 0.6s forwards;
+}
+.mongo-leave-active {
+  animation: slide-out-mongo 0.6s forwards;
+}
+@keyframes slide-in-mongo {
+  from {
+    right: 0vh;
+    opacity: 0;
+  }
+  to {
+    right: 150px;
+    opacity: 1;
+  }
+}
+@keyframes slide-out-mongo {
+  from {
+    right: 150px;
+    opacity: 1;
+  }
+  to {
+    right: 0vh;
+    opacity: 0;
+  }
+}
+/*
+ *
+ *    responsive
+ *
+ *
+ * * * * * * * */
+
+//extra small < 600px
+@media screen and (max-width: 600px) {
+}
+// small 600px > < 960px
+@media screen and (min-width: 600px) and (max-width: 960px) {
+
+}
+//medium 960px > < 1264px
+
+@media screen and (min-width: 960px) and (max-width: 1264px) {
+  .title-enter-active {
+    animation: slide-in-title 1s forwards;
+  }
+  .title-leave-active {
+    animation: slide-out-title 1s forwards;
+  }
+  @keyframes slide-in-title {
+    from {
+      top: 0vh;
+      opacity: 0;
+    }
+    to {
+      top: 30px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-title {
+    from {
+      top: 30px;
+      opacity: 1;
+    }
+    to {
+      top: 0vh;
+      opacity: 0;
+    }
+  }
+  
+  .node-enter-active {
+    animation: slide-in-node 1s forwards;
+  }
+  .node-leave-active {
+    animation: slide-out-node 1s forwards;
+  }
+  @keyframes slide-in-node {
+    from {
+      right: 100vh;
+      opacity: 0;
+    }
+    to {
+      right: 150px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-node {
+    from {
+      right: 150px;
+      opacity: 1;
+    }
+    to {
+      right: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .sass-enter-active {
+    animation: slide-in-sass 1s forwards;
+  }
+  .sass-leave-active {
+    animation: slide-out-sass 1s forwards;
+  }
+  @keyframes slide-in-sass {
+    from {
+      right: 0vh;
+      opacity: 0;
+    }
+    to {
+      right: 100px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-sass {
+    from {
+      right: 100px;
+      opacity: 1;
+    }
+    to {
+      right: 0vh;
+      opacity: 0;
+    }
+  }
+
+  .html-enter-active {
+    animation: slide-in-html 1s forwards;
+  }
+  .html-leave-active {
+    animation: slide-out-html 1s forwards;
+  }
+  @keyframes slide-in-html {
+    from {
+      right: 1000px;
+      opacity: 0;
+    }
+    to {
+      right: 350px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-html {
+    from {
+      right: 350px;
+      opacity: 1;
+    }
+    to {
+      right: 1000px;
+      opacity: 0;
+    }
+  }
+
+  .linux-enter-active {
+    animation: slide-in-linux 1s forwards;
+  }
+  .linux-leave-active {
+    animation: slide-out-linux 1s forwards;
+  }
+  @keyframes slide-in-linux {
+    from {
+      bottom: 100vh;
+      opacity: 0;
+    }
+    to {
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-linux {
+    from {
+      bottom: 0px;
+      opacity: 1;
+    }
+    to {
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .express-enter-active {
+    animation: slide-in-express 0.8s forwards;
+  }
+  .express-leave-active {
+    animation: slide-out-express 0.8s forwards;
+  }
+  @keyframes slide-in-express {
+    from {
+      right: -1000px;
+
+      opacity: 0;
+    }
+    to {
+      right: 50px;
+
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-express {
+    from {
+      right: 50px;
+      opacity: 1;
+    }
+    to {
+      right: -1000px;
+      opacity: 0;
+    }
+  }
+
+  .git-enter-active {
+    animation: slide-in-git 1s forwards;
+  }
+  .git-leave-active {
+    animation: slide-out-git 1s forwards;
+  }
+  @keyframes slide-in-git {
+    from {
+      bottom: 0vh;
+      opacity: 0;
+    }
+    to {
+      bottom: 175px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-git {
+    from {
+      bottom: 175px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0vh;
+      opacity: 0;
+    }
+  }
+
+  .mongo-enter-active {
+    animation: slide-in-mongo 0.6s forwards;
+  }
+  .mongo-leave-active {
+    animation: slide-out-mongo 0.6s forwards;
+  }
+  @keyframes slide-in-mongo {
+    from {
+      right: 0vh;
+      opacity: 0;
+    }
+    to {
+      right: 0px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-mongo {
+    from {
+      right: 0px;
+      opacity: 1;
+    }
+    to {
+      right: 0vh;
+      opacity: 0;
+    }
+  }
+}
+
+//large 1264px* > < 1904px
+@media screen and (min-width: 1264px) and (max-width: 1659px) {
+  .title-enter-active {
+    animation: slide-in-title 1s forwards;
+  }
+  .title-leave-active {
+    animation: slide-out-title 1s forwards;
+  }
+  @keyframes slide-in-title {
+    from {
+      top: 0vh;
+      opacity: 0;
+    }
+    to {
+      top: 50px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-title {
+    from {
+      top: 50px;
+      opacity: 1;
+    }
+    to {
+      top: 0vh;
+      opacity: 0;
+    }
+  }
+  .node-enter-active {
+    animation: slide-in-node 1s forwards;
+  }
+  .node-leave-active {
+    animation: slide-out-node 1s forwards;
+  }
+  @keyframes slide-in-node {
+    from {
+      right: 100vh;
+      opacity: 0;
+    }
+    to {
+      right: 450px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-node {
+    from {
+      right: 450px;
+      opacity: 1;
+    }
+    to {
+      right: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .sass-enter-active {
+    animation: slide-in-sass 1s forwards;
+  }
+  .sass-leave-active {
+    animation: slide-out-sass 1s forwards;
+  }
+  @keyframes slide-in-sass {
+    from {
+      right: 0vh;
+      opacity: 0;
+    }
+    to {
+      right: 220px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-sass {
+    from {
+      right: 220px;
+      opacity: 1;
+    }
+    to {
+      right: 0vh;
+      opacity: 0;
+    }
+  }
+
+  .html-enter-active {
+    animation: slide-in-html 1s forwards;
+  }
+  .html-leave-active {
+    animation: slide-out-html 1s forwards;
+  }
+  @keyframes slide-in-html {
+    from {
+      right: 100vh;
+      opacity: 0;
+    }
+    to {
+      right: 600px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-html {
+    from {
+      right: 600px;
+      opacity: 1;
+    }
+    to {
+      right: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .linux-enter-active {
+    animation: slide-in-linux 1s forwards;
+  }
+  .linux-leave-active {
+    animation: slide-out-linux 1s forwards;
+  }
+  @keyframes slide-in-linux {
+    from {
+      bottom: 100vh;
+      opacity: 0;
+    }
+    to {
+      bottom: 250px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-linux {
+    from {
+      bottom: 250px;
+      opacity: 1;
+    }
+    to {
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .express-enter-active {
+    animation: slide-in-express 0.8s forwards;
+  }
+  .express-leave-active {
+    animation: slide-out-express 0.8s forwards;
+  }
+  @keyframes slide-in-express {
+    from {
+      right: 0vh;
+      opacity: 0;
+    }
+    to {
+      right: 170px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-express {
+    from {
+      right: 0;
+      opacity: 1;
+    }
+    to {
+      right: 170px;
+      opacity: 0;
+    }
+  }
+
+  .git-enter-active {
+    animation: slide-in-git 1s forwards;
+  }
+  .git-leave-active {
+    animation: slide-out-git 1s forwards;
+  }
+  @keyframes slide-in-git {
+    from {
+      bottom: 0vh;
+      opacity: 0;
+    }
+    to {
+      bottom: 110px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-git {
+    from {
+      bottom: 110px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0vh;
+      opacity: 0;
+    }
+  }
+
+  .mongo-enter-active {
+    animation: slide-in-mongo 0.6s forwards;
+  }
+  .mongo-leave-active {
+    animation: slide-out-mongo 0.6s forwards;
+  }
+  @keyframes slide-in-mongo {
+    from {
+      right: 0vh;
+      opacity: 0;
+    }
+    to {
+      right: 50px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-mongo {
+    from {
+      right: 50px;
+      opacity: 1;
+    }
+    to {
+      right: 0vh;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .title-enter-active {
+    animation: slide-in-title 1s forwards;
+  }
+  .title-leave-active {
+    animation: slide-out-title 1s forwards;
+  }
+  @keyframes slide-in-title {
+    from {
+      top: 0vh;
+      opacity: 0;
+    }
+    to {
+      top: 70px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-title {
+    from {
+      top: 70px;
+      opacity: 1;
+    }
+    to {
+      top: 0vh;
+      opacity: 0;
+    }
+  }
+  .node-enter-active {
+    animation: slide-in-node 1s forwards;
+  }
+  .node-leave-active {
+    animation: slide-out-node 1s forwards;
+  }
+  @keyframes slide-in-node {
+    from {
+      right: 100vh;
+      opacity: 0;
+    }
+    to {
+        right: 450px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-node {
+    from {
+        right: 450px;
+      opacity: 1;
+    }
+    to {
+      right: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .sass-enter-active {
+    animation: slide-in-sass 1s forwards;
+  }
+  .sass-leave-active {
+    animation: slide-out-sass 1s forwards;
+  }
+  @keyframes slide-in-sass {
+    from {
+      right: 0vh;
+      opacity: 0;
+    }
+    to {
+        right: 220px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-sass {
+    from {
+        right: 220px;
+      opacity: 1;
+    }
+    to {
+      right: 0vh;
+      opacity: 0;
+    }
+  }
+
+  .html-enter-active {
+    animation: slide-in-html 1s forwards;
+  }
+  .html-leave-active {
+    animation: slide-out-html 1s forwards;
+  }
+  @keyframes slide-in-html {
+    from {
+      right: 1200px;
+      opacity: 0;
+    }
+    to {
+      right: 600px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-html {
+    from {
+      right: 600px;
+      opacity: 1;
+    }
+    to {
+      right: 1200px;
+      opacity: 0;
+    }
+  }
+
+  .linux-enter-active {
+    animation: slide-in-linux 1s forwards;
+  }
+  .linux-leave-active {
+    animation: slide-out-linux 1s forwards;
+  }
+  @keyframes slide-in-linux {
+    from {
+      bottom: 100vh;
+      opacity: 0;
+    }
+    to {
+      bottom: 180px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-linux {
+    from {
+      bottom: 180px;
+      opacity: 1;
+    }
+    to {
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .express-enter-active {
+    animation: slide-in-express 0.8s forwards;
+  }
+  .express-leave-active {
+    animation: slide-out-express 0.8s forwards;
+  }
+  @keyframes slide-in-express {
+    from {
+      right: 0vh;
+      opacity: 0;
+    }
+    to {
+      right: 170px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-express {
+    from {
+      right: 170px;
+      opacity: 1;
+    }
+    to {
+      right: 0vh;
+      opacity: 0;
+    }
+  }
+
+  .git-enter-active {
+    animation: slide-in-git 1s forwards;
+  }
+  .git-leave-active {
+    animation: slide-out-git 1s forwards;
+  }
+  @keyframes slide-in-git {
+    from {
+      bottom: 0vh;
+      opacity: 0;
+    }
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-git {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+    to {
+      bottom: 0vh;
+      opacity: 0;
+    }
+  }
+
+  .mongo-enter-active {
+    animation: slide-in-mongo 0.6s forwards;
+  }
+  .mongo-leave-active {
+    animation: slide-out-mongo 0.6s forwards;
+  }
+  @keyframes slide-in-mongo {
+    from {
+      right: 0vh;
+      opacity: 0;
+    }
+    to {
+      right: 50px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-mongo {
+    from {
+      right: 50px;
+      opacity: 1;
+    }
+    to {
+      right: 0vh;
+      opacity: 0;
+    }
+  }
+}

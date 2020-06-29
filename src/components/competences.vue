@@ -1,9 +1,14 @@
 <template>
-  <section class="Comp">
-    <v-row>
-      <v-col>
-        <h1 class="Comp--title grey--text text--darken-3">Compétences</h1>
-        <div class="Comp--node">
+  <section class="">
+    <v-row class=" Comp ">
+      <transition name="title">
+        <h2 v-if="showComp" class="Comp--title grey--text text--darken-3">
+          Compétences
+        </h2>
+      </transition>
+
+      <transition name="node">
+        <div v-if="showComp" class="Comp--node">
           <h4 class="grey--text text--darken-1">NodeJs</h4>
           <v-img
             src="../../public/img/nodejs.jpg"
@@ -11,7 +16,10 @@
             height="150px"
           ></v-img>
         </div>
-        <div class="Comp--sass">
+      </transition>
+
+      <transition name="sass">
+        <div v-if="showComp" class="Comp--sass">
           <h4 class="grey--text text--darken-1">Sass</h4>
           <v-img
             src="../../public/img/sass.png"
@@ -19,7 +27,9 @@
             max-height="100px"
           ></v-img>
         </div>
-        <div class="Comp--html  ">
+      </transition>
+      <transition name="html">
+        <div v-if="showComp" class="Comp--html">
           <h4 class="grey--text text--darken-1">Html/Css/Js</h4>
           <v-img
             src="../../public/img/html.jpg"
@@ -27,7 +37,10 @@
             height="100px"
           ></v-img>
         </div>
-        <div class="Comp--linux mt-10">
+      </transition>
+
+      <transition name="linux">
+        <div v-if="showComp" class="Comp--linux">
           <h4 class="grey--text text--darken-1">Linux</h4>
           <v-img
             src="../../public/img/linux.jpeg"
@@ -35,7 +48,10 @@
             height="100px"
           ></v-img>
         </div>
-        <div class="Comp--express">
+      </transition>
+
+      <transition name="express">
+        <div v-if="showComp" class="Comp--express">
           <h4 class="grey--text text--darken-1">ExpressJs/Mongoose</h4>
           <v-img
             src="../../public/img/express.png"
@@ -43,7 +59,10 @@
             height="100px"
           ></v-img>
         </div>
-        <div class="Comp--git ">
+      </transition>
+
+      <transition name="git">
+        <div v-if="showComp" class="Comp--git">
           <h4 class="grey--text text--darken-1">Git/Github</h4>
           <v-img
             src="../../public/img/git.png"
@@ -51,18 +70,21 @@
             height="100px"
           ></v-img>
         </div>
-        <div class="Comp--mongo ">
+      </transition>
+
+      <transition name="mongo">
+        <div v-if="showComp" class="Comp--mongo ">
           <h4 class="grey--text text--darken-1">MongoDB</h4>
           <v-img
             src="../../public/img/mongo.png"
-            width="500px"
+            width="450px"
             height="150px"
           ></v-img>
         </div>
-        <h1 class=" numerotation grey--text text--darken-2 float-right">
-          {{ tick }} - {{ tickMax }}
-        </h1>
-      </v-col>
+      </transition>
+      <h1 class=" numerotation grey--text text--darken-2 float-right">
+        {{ tick }} - {{ tickMax }}
+      </h1>
     </v-row>
   </section>
 </template>
@@ -72,6 +94,7 @@ export default {
   data() {
     return {
       wheelTick: 0,
+      showComp: false,
     };
   },
   created() {
@@ -81,60 +104,10 @@ export default {
   methods: {
     //function ticking scroll
     CompHandleScroll() {
-      let node = document.querySelector(".Comp--node"),
-          sass = document.querySelector(".Comp--sass"),
-          express = document.querySelector(".Comp--express"),
-          linux = document.querySelector(".Comp--linux"),
-          html = document.querySelector(".Comp--html"),
-          git = document.querySelector(".Comp--git"),
-          mongo = document.querySelector(".Comp--mongo"),
-          title = document.querySelector(".Comp--title")
-
-      if (this.tick >= 5) {
-        
-          let nodeRation = -335 + this.tick * 50,
-          sassRatio = -335 + this.tick * 44,
-          expressRation = -535 + this.tick * 55,
-          linuxRation = 800 - this.tick * 40,
-          htmlRation = 1300 - this.tick * 40,
-          gitRation = -335 + this.tick * 23,
-          mongoRation = -335 + this.tick * 35,
-          titleRation = -335 + this.tick * 35;
-
-        if (nodeRation < 400) {
-          node.style.bottom = nodeRation + "px";
-          node.style.opacity = 0 + this.tick / 10;
-        }
-        if (sassRatio < 395) {
-          sass.style.bottom = sassRatio + "px";
-          sass.style.opacity = 0 + this.tick / 10;
-        }
-        if (expressRation < 416) {
-          express.style.right = expressRation + "px";
-          express.style.opacity = 0 + this.tick / 10;
-        }
-        if (linuxRation > 200) {
-          linux.style.bottom = linuxRation + "px";
-          linux.style.opacity = 0 + this.tick / 10;
-        }
-        if (htmlRation > 800) {
-          html.style.right = htmlRation + "px";
-          html.style.opacity = 0 + this.tick / 10;
-        }
-        if (gitRation < 113) {
-          git.style.bottom = gitRation + "px";
-          git.style.opacity = 0 + this.tick / 10;
-        }
-        if (mongoRation < 70) {
-          mongo.style.bottom = mongoRation + "px";
-          mongo.style.opacity = 0 + this.tick / 10;
-        }
-        if (titleRation < 445) {
-          title.style.bottom = titleRation + "px";
-          title.style.opacity = 0 + this.tick / 10;
-        }
-      }else if(this.tick >= 22){
-        console.log('test')
+      if (this.tick <= 5 || this.tick >= 10) {
+        this.showComp = false;
+      } else if (this.tick >= 5) {
+        this.showComp = true;
       }
     },
   },
@@ -145,6 +118,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../public/style/competences.scss";
+@import "../../public/style/competencesAnimation.scss";
 </style>

@@ -2,6 +2,13 @@ html {
   scroll-behavior: smooth;
   overflow: hidden;
 }
+
+.ME{
+  position: absolute !important;
+  span{
+    font-size: 15px;
+  }
+}
 .home {
     font-family: 'Lobster Two';
     display: grid;
@@ -34,19 +41,19 @@ html {
     grid-area: d;
   }
   .nav--btn--propos{
-    color: #ffffff;
+    color: #ffffff ;
     font-family: 'Poppins';
   }
   .nav--btn--Comp{
-    color: #6b6a6a;
+    color: #6b6a6a ;
     font-family: 'Poppins';
   }
   .nav--btn--real{
-    color: #6b6a6a;
+    color: #6b6a6a ;
     font-family: 'Poppins';
   }
   .nav--btn--cont{
-    color: #6b6a6a;
+    color: #6b6a6a ;
     font-family: 'Poppins';
   }
   .social {
@@ -63,8 +70,113 @@ html {
   .darkTheme{
     background-color: #212121;
   }
-  .CompComponent{
-    display: none;
+  
+  .numerotation{
+    position: absolute;
+    font-size: 10px;
+    transform: rotate(90deg);
+    bottom: 0;
+    right: 0;
+    height: 20Px;
+}
+
+.g-cursor {
+ 
+
+  &_hide {
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+    transition: width .6s ease,
+      height .6s ease,
+      opacity .6s ease;
+      
   }
+
+  &__circle {
+    pointer-events: none;
+    user-select: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border: 2px solid rgb(100, 100, 100);
+    border-radius: 100%;
+    z-index: 5555;
+    backface-visibility: hidden;
+    transition: opacity .6s ease;
+  }
+
+  
+
+  &_hover {
+    .g-cursor__circle {
+      opacity: 0;
+      width: 60px;
+      height: 60px;
+      transition: width .6s ease,
+        height .6s ease,
+        opacity .6s ease;
+    }
+  }
+}
+.trot-enter-active {
+  animation: slide-in-trot 0.5s forwards;
+}
+.trot-leave-active {
+  animation: slide-out-trot 0.5s forwards;
+} 
+@keyframes slide-in-trot {
+  from {
+    
+    opacity: 0;
+  }
+  to {
+    
+    opacity: 1;
+  }
+}
+@keyframes slide-out-trot {
+  from {
+    
+    opacity: 1;
+  }
+  to {
+    
+    opacity: 0;
+  }
+}
+.claviste-enter-active {
+  animation: slide-in-claviste 0.5s forwards;
+}
+.claviste-leave-active {
+  animation: slide-out-claviste 0.5s forwards;
+} 
+@keyframes slide-in-claviste {
+  from {
+    
+    opacity: 0;
+  }
+  to {
+    
+    opacity: 1;
+  }
+}
+@keyframes slide-out-claviste {
+  from {
+    
+    opacity: 1;
+  }
+  to {
+    
+    opacity: 0;
+  }
+}
+
+.contactComponent{
+  width: 100%;
+  height: 100%;
+}
   
  

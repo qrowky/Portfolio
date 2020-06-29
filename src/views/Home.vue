@@ -1,5 +1,9 @@
 <template>
   <div class="home darkTheme">
+    <h1 class=" ME teal--text text--lighten-3 mt-5 ml-5 ">
+      Gabillard Thibault <span>Développeur junior Fullstack</span>
+    </h1>
+
     <!-- //Social -->
     <div class="social d-flex flex-row justify-end mr-12 mt-3">
       <a
@@ -23,24 +27,55 @@
     </div>
     <!-- //Navigation -->
     <div class="home--nav--APropos d-flex justify-end align-end">
-      <div v-on:click="navPropos"  class="nav--btn--propos">A Propos</div>
+      <div to="/" class="nav--btn--propos">A Propos</div>
     </div>
     <div class="home--nav--Comp d-flex justify-start align-end">
-      <div  class="nav--btn--Comp">Compétences</div>
+      <div to="/" class="nav--btn--Comp">Compétences</div>
     </div>
-    <div class="home--nav--Real d-flex  align-start justify-end">
-      <div  class="nav--btn--real">Réalisations</div>
+    <div
+      class="home--nav--Real d-flex flex-column-reverse  align-end justify-end"
+    >
+      <transition name="trot">
+        <a v-if="ShowReal" class="nav--btn--trot grey--text text--lighten-1"
+          >Trot&Go
+          <span v-if="showTrot"> <i class="fas fa-chevron-left"></i> </span
+        ></a>
+      </transition>
+      <transition name="claviste">
+        <a v-if="ShowReal" class="nav--btn--claviste grey--text text--lighten-1"
+          >The Claviste
+          <span v-if="showClav"> <i class="fas fa-chevron-left"></i> </span
+        ></a>
+      </transition>
+      <div to="/" class="nav--btn--real">Réalisations</div>
     </div>
     <div class="home--nav--contact d-flex  align-start justify-start">
-      <div  class="nav--btn--cont">Me Contacter</div>
+      <div to="/" class="nav--btn--cont">Me Contacter</div>
     </div>
 
     <!-- //Content middle -->
     <v-container class="home--container" fluid>
-    
-        <propos :tick="wheelTick" :tickMax="wheelTickMax" class="proposComponent" />
-        <competences :tick="wheelTick" :tickMax="wheelTickMax" class="CompComponent" /> 
-
+      <propos
+        :tick="wheelTick"
+        :tickMax="wheelTickMax"
+        class="proposComponent"
+      />
+      <competences
+        :tick="wheelTick"
+        :tickMax="wheelTickMax"
+        class="CompComponent"
+      />
+      <realisation
+        :tick="wheelTick"
+        :tickMax="wheelTickMax"
+        class="realComponent"
+      />
+      <trot :tick="wheelTick" :tickMax="wheelTickMax" class="trotComponent" />
+      <contact
+        :tick="wheelTick"
+        :tickMax="wheelTickMax"
+        class="contactComponent"
+      />
     </v-container>
 
     <div class="signature d-flex justify-end align-end mr-5 grey--text ">
@@ -50,17 +85,26 @@
 </template>
 
 <script>
-import propos from '../components/aPropos'
-import competences from '../components/competences'
+import propos from "../components/aPropos";
+import competences from "../components/competences";
+import realisation from "../components/realisation";
+import trot from "../components/trot";
+import contact from "../components/contact";
 export default {
   components: {
     propos,
     competences,
+    realisation,
+    trot,
+    contact,
   },
   data() {
     return {
       wheelTick: 0,
-      wheelTickMax: 200,
+      wheelTickMax: 25,
+      ShowReal: false,
+      showClav: false,
+      showTrot: false,
     };
   },
   created() {
@@ -68,70 +112,71 @@ export default {
     window.addEventListener("mousewheel", this.handleScroll);
   },
   methods: {
-    
-    //function ticking scroll
     handleScroll(event) {
-      let container = document.querySelector('.home')
-      let propos = document.querySelector('.proposComponent')
-      let comp = document.querySelector('.CompComponent')
-      let btnPropos = document.querySelector('.nav--btn--propos')
-      let btnComp = document.querySelector('.nav--btn--Comp')
-      let btnReal = document.querySelector('.nav--btn--real')
-      let btnCont = document.querySelector('.nav--btn--cont')
+      let container = document.querySelector(".home");
+      let proposBtn = document.querySelector(".nav--btn--propos");
+      let compBtn = document.querySelector(".nav--btn--Comp");
+      let realBtn = document.querySelector(".nav--btn--real");
+      let contBtn = document.querySelector(".nav--btn--cont");
 
       //ticking
-      if (event.deltaY > 0) {
+      if (event.deltaY > 0 && this.wheelTick < 25) {
         this.wheelTick++;
-      } else if (event.deltaY < 0 && this.wheelTick > 0){
+      } else if (event.deltaY < 0 && this.wheelTick > 0) {
         this.wheelTick--;
       }
-      if(this.wheelTick >= 5){
-        comp.style.display="block"
-      }else if (this.wheelTick <= 5){
-        comp.style.display="none"
-      }else if (this.wheelTick >=8){
-        propos.style.display="none"
-      }else if (this.wheelTick <= 8){
-        propos.style.dispay="block"
-      }
-      
-      if (this.wheelTick >= 10){
-
-        container.style.backgroundColor= "#e0e0e0"
-        container.style.transition= "2s"
-        btnPropos.style.color="#6b6a6a"
-        btnComp.style.color="#000000"
-        btnReal.style.color="#6b6a6a"
-        btnCont.style.color="#6b6a6a"
-       
-        
-      }else if( this.wheelTick <= 10){
-        
-        container.style.backgroundColor= "#212121"
-        container.style.transition= "2s"
-        btnPropos.style.color="#ffffff"
-        btnComp.style.color="#6b6a6a"
-        btnReal.style.color="#6b6a6a"
-        btnCont.style.color="#6b6a6a"
-        
-        
+      if (this.wheelTick <= 5) {
+        container.style.backgroundColor = "#212121";
+        container.style.transition = "2s";
+        proposBtn.style.color = "#ffffff";
+        proposBtn.style.transition = "2s";
+        compBtn.style.color = "#6b6a6a";
+        compBtn.style.transition = "2s";
+      } else if (this.wheelTick >= 5 && this.wheelTick <= 9) {
+        this.ShowReal = false;
+        container.style.backgroundColor = "#e0e0e0";
+        container.style.transition = "2s";
+        compBtn.style.color = "#212121";
+        compBtn.style.transition = "2s";
+        proposBtn.style.color = "#6b6a6a";
+        proposBtn.style.transition = "2s";
+        realBtn.style.color = "#6b6a6a";
+        realBtn.style.transition = "2s";
+      } else if (this.wheelTick >= 9) {
+        this.ShowReal = true;
+        this.showClav = true;
+        this.showTrot = false;
+        container.style.backgroundColor = "#212121";
+        container.style.transition = "2s";
+        realBtn.style.color = "#ffffff";
+        realBtn.style.transition = "2s";
+        compBtn.style.color = "#6b6a6a";
+        compBtn.style.transition = "2s";
       }
 
-      
-      console.log(this.wheelTick)
+      if (this.wheelTick >= 15) {
+        this.ShowReal = true;
+        this.showTrot = true;
+        this.showClav = false;
+        container.style.backgroundColor = "#212121";
+        container.style.transition = "2s";
+        realBtn.style.color = "#ffffff";
+        realBtn.style.transition = "2s";
+        compBtn.style.color = "#6b6a6a";
+        compBtn.style.transition = "2s";
+      } 
+       if (this.wheelTick >= 20) {
+        this.ShowReal = false;
+        container.style.backgroundColor = "#e0e0e0";
+        container.style.transition = "2s";
+        contBtn.style.color = "#212121";
+        contBtn.style.transition = "2s";
+        proposBtn.style.color = "#6b6a6a";
+        proposBtn.style.transition = "2s";
+        realBtn.style.color = "#6b6a6a";
+        realBtn.style.transition = "2s";
+      }
     },
-    navPropos(){
-     
-      let ticker = this.wheelTick
-
-      for(let i= 0;i < 10; i++){
-        ticker++
-        console.log('ticker:', ticker)
-      }   
-      return this.wheelTick = ticker
-      
-    },
-
   },
   destroyed() {
     // destroye de l'event  pour le ticking scroll event

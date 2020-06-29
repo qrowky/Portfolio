@@ -45,9 +45,9 @@ export default {
   methods: {
     //function ticking scroll
     ContHandleScroll() {
-      if (this.tick <= 20) {
+      if (this.tick <= 19) {
         this.showCont = false;
-      } else if (this.tick >= 20) {
+      } else if (this.tick >= 19) {
         this.showCont = true;
       }
     },

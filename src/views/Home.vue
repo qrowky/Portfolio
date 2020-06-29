@@ -1,5 +1,12 @@
 <template>
   <div class="home darkTheme">
+    <transition name="cursor">
+      <div
+        v-if="showCursor"
+        :style="cursorCircle"
+        class="g-cursor__circle"
+      ></div>
+    </transition>
     <h1 class=" ME teal--text text--lighten-3 mt-5 ml-5 ">
       Gabillard Thibault <span>Développeur junior Fullstack</span>
     </h1>
@@ -27,30 +34,68 @@
     </div>
     <!-- //Navigation -->
     <div class="home--nav--APropos d-flex justify-end align-end">
-      <div to="/" class="nav--btn--propos">A Propos</div>
+      <div
+        @mouseover="showCursor = true"
+        @mouseleave="showCursor = false"
+        @click="LinkPropos"
+        class="nav--btn--propos"
+      >
+        A Propos
+      </div>
     </div>
     <div class="home--nav--Comp d-flex justify-start align-end">
-      <div to="/" class="nav--btn--Comp">Compétences</div>
+      <div
+        @mouseover="showCursor = true"
+        @mouseleave="showCursor = false"
+        @click="LinkComp"
+        class="nav--btn--Comp"
+      >
+        Compétences
+      </div>
     </div>
     <div
       class="home--nav--Real d-flex flex-column-reverse  align-end justify-end"
     >
       <transition name="trot">
-        <a v-if="ShowReal" class="nav--btn--trot grey--text text--lighten-1"
+        <a
+          @mouseover="showCursor = true"
+          @mouseleave="showCursor = false"
+          @click="LinkTrot"
+          v-if="ShowReal"
+          class="nav--btn--trot grey--text text--lighten-1"
           >Trot&Go
           <span v-if="showTrot"> <i class="fas fa-chevron-left"></i> </span
         ></a>
       </transition>
       <transition name="claviste">
-        <a v-if="ShowReal" class="nav--btn--claviste grey--text text--lighten-1"
+        <a
+          @mouseover="showCursor = true"
+          @mouseleave="showCursor = false"
+          @click="LinkClav"
+          v-if="ShowReal"
+          class="nav--btn--claviste grey--text text--lighten-1"
           >The Claviste
           <span v-if="showClav"> <i class="fas fa-chevron-left"></i> </span
         ></a>
       </transition>
-      <div to="/" class="nav--btn--real">Réalisations</div>
+      <div
+        @mouseover="showCursor = true"
+        @mouseleave="showCursor = false"
+        @click="LinkReal"
+        class="nav--btn--real"
+      >
+        Réalisations
+      </div>
     </div>
     <div class="home--nav--contact d-flex  align-start justify-start">
-      <div to="/" class="nav--btn--cont">Me Contacter</div>
+      <div
+        @mouseover="showCursor = true"
+        @mouseleave="showCursor = false"
+        @click="LinkCont"
+        class="nav--btn--cont"
+      >
+        Me Contacter
+      </div>
     </div>
 
     <!-- //Content middle -->
@@ -58,22 +103,31 @@
       <propos
         :tick="wheelTick"
         :tickMax="wheelTickMax"
+        :link="linkPropos"
         class="proposComponent"
       />
       <competences
         :tick="wheelTick"
         :tickMax="wheelTickMax"
+        :linkcomp="linkComp"
         class="CompComponent"
       />
       <realisation
         :tick="wheelTick"
         :tickMax="wheelTickMax"
+        :link="linkReal"
         class="realComponent"
       />
-      <trot :tick="wheelTick" :tickMax="wheelTickMax" class="trotComponent" />
+      <trot
+        :tick="wheelTick"
+        :tickMax="wheelTickMax"
+        :link="linkTrot"
+        class="trotComponent"
+      />
       <contact
         :tick="wheelTick"
         :tickMax="wheelTickMax"
+        :link="linkCont"
         class="contactComponent"
       />
     </v-container>
@@ -105,6 +159,18 @@ export default {
       ShowReal: false,
       showClav: false,
       showTrot: false,
+      linkPropos: false,
+      linkComp: false,
+      linkReal: false,
+      linkClav: false,
+      linkTrot: false,
+      linkCont: false,
+      xChild: 0,
+      yChild: 0,
+      xParent: 0,
+      yParent: 0,
+      hover: false,
+      showCursor: false,
     };
   },
   created() {
@@ -164,8 +230,10 @@ export default {
         realBtn.style.transition = "2s";
         compBtn.style.color = "#6b6a6a";
         compBtn.style.transition = "2s";
-      } 
-       if (this.wheelTick >= 20) {
+        contBtn.style.color = "#6b6a6a";
+        contBtn.style.transition = "2s";
+      }
+      if (this.wheelTick >= 20) {
         this.ShowReal = false;
         container.style.backgroundColor = "#e0e0e0";
         container.style.transition = "2s";
@@ -177,6 +245,88 @@ export default {
         realBtn.style.transition = "2s";
       }
     },
+    LinkPropos() {
+      if (this.linkPropos != true) {
+        this.linkComp = false;
+        this.linkPropos = true;
+        this.linkReal = false;
+        this.linkClav = false;
+        this.linkTrot = false;
+        this.linkCont = false;
+        this.wheelTick = 1;
+      }
+    },
+    LinkComp() {
+      if (this.linkComp != true) {
+        this.linkComp = true;
+        this.linkPropos = false;
+        this.linkReal = false;
+        this.linkClav = false;
+        this.linkTrot = false;
+        this.linkCont = false;
+        this.wheelTick = 6;
+      }
+    },
+    LinkReal() {
+      if (this.linkReal != true) {
+        this.linkComp = false;
+        this.linkPropos = false;
+        this.linkReal = true;
+        this.linkClav = false;
+        this.linkTrot = false;
+        this.linkCont = false;
+        this.wheelTick = 10;
+      }
+    },
+    LinkClav() {
+      if (this.linkClav != true) {
+        this.linkComp = false;
+        this.linkPropos = false;
+        this.linkReal = false;
+        this.linkClav = true;
+        this.linkTrot = false;
+        this.linkCont = false;
+        this.wheelTick = 6;
+      }
+    },
+    LinkTrot() {
+      if (this.linkTrot != true) {
+        this.linkComp = false;
+        this.linkPropos = false;
+        this.linkReal = false;
+        this.linkClav = false;
+        this.linkTrot = true;
+        this.linkCont = false;
+        this.wheelTick = 15;
+      }
+    },
+
+    LinkCont() {
+      if (this.linkCont != true) {
+        this.linkComp = false;
+        this.linkPropos = false;
+        this.linkReal = false;
+        this.linkClav = false;
+        this.linkTrot = false;
+        this.linkCont = true;
+        this.wheelTick = 20;
+      }
+    },
+    moveCursor(e) {
+      this.xChild = e.clientX;
+      this.yChild = e.clientY;
+
+      this.xParent = e.clientX - 20;
+      this.yParent = e.clientY - 15;
+    },
+  },
+  computed: {
+    cursorCircle() {
+      return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`;
+    },
+  },
+  mounted() {
+    document.addEventListener("mousemove", this.moveCursor);
   },
   destroyed() {
     // destroye de l'event  pour le ticking scroll event

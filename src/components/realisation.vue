@@ -1,5 +1,6 @@
 <template>
   <section>
+  
     <transition name="realTitle">
       <span v-if="showReal" class=" real--title white--text "
         >The Claviste</span
@@ -17,7 +18,11 @@
     </v-row>
     <v-row>
       <transition name="realP">
-        <p v-if="showReal" class="real--p my-5 mx-5 grey px-12 py-12">
+        <p
+          
+          v-if="showReal"
+          class="real--p my-5 mx-5 grey px-12 py-12"
+        >
           The Claviste est un blog sur le theme du clavier que j'ai réaliser
           l'or de ma formation. J'ai utiliser handelbars est materilize pour le
           front-end et NodeJs pour le back-end
@@ -36,6 +41,7 @@ export default {
     return {
       wheelTick: 0,
       showReal: false,
+      
     };
   },
   created() {
@@ -50,7 +56,6 @@ export default {
       } else if (this.tick >= 9 || this.tick <= 15) {
         this.showReal = true;
       }
-      
     },
   },
   destroyed() {
@@ -62,5 +67,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../public/style/real.scss";
+@import "../../public/style/style.scss";
 @import "../../public/style/realAnimation.scss";
 </style>

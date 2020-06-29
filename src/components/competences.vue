@@ -73,7 +73,7 @@
       </transition>
 
       <transition name="mongo">
-        <div v-if="showComp" class="Comp--mongo ">
+        <div v-if="showComp" class="Comp--mongo">
           <h4 class="grey--text text--darken-1">MongoDB</h4>
           <v-img
             src="../../public/img/mongo.png"
@@ -90,7 +90,11 @@
 </template>
 <script>
 export default {
-  props: ["tick", "tickMax"],
+  props: {
+    tick: Number,
+    tickMax: Number,
+    linkcomp: Boolean,
+  },
   data() {
     return {
       wheelTick: 0,
@@ -100,6 +104,7 @@ export default {
   created() {
     //event pour le ticking scroll event
     window.addEventListener("mousewheel", this.CompHandleScroll);
+    
   },
   methods: {
     //function ticking scroll
@@ -108,6 +113,10 @@ export default {
         this.showComp = false;
       } else if (this.tick >= 5) {
         this.showComp = true;
+      }
+      if (this.linkcomp === true) {
+        this.showComp = true;
+        console.log("coucou");
       }
     },
   },

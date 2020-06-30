@@ -20,7 +20,8 @@
     <v-row>
       <transition name="trotP">
         <p v-if="showTrot" class="trot--p my-5 mx-5 grey px-6 py-6">
-          Trot and go est un site realiser avec deux collegue de formation ce site nous à permit de mettre en pratique nodeJs avec le framework express est mongo
+          Description : Ce site n'est pas réellement un site mais un éxercice réaliser pendant ma formation pour mettre en pratique nodejs .
+          Outils : Materilize , handlebars , jquery , javascript , nodejs , mongoDB .
           <span><v-btn class="float-right mt-5" text target="_blank" href="https://trotgo.noydono.fr">Voir le site </v-btn></span>
         </p>
       </transition>

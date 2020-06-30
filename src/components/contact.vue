@@ -17,7 +17,7 @@
                 <transition name="phone">
                  <v-card v-if="showCont" class="grey darken-4 mt-5">
                     <v-card-text class="grey--text text-center">
-                        <i class="fas fa-mobile-alt  mx-2"></i>: 06.20.42.55.88
+                        <i class="fas fa-mobile-alt  mx-2"></i>: 06.20.42.45.88
                     </v-card-text>
                 </v-card>
                 </transition>

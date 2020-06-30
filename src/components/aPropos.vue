@@ -21,15 +21,12 @@
               Qui suis-je !
             </h2>
             <p>
-              A la suite d'une fin de contrat, j'ai décidé de me réorienter dans
-              un domaine que j'avais par le passé déjà un peu découvert grâce au
-              Site du Zéro et Code Academy. J'ai décidé de redécouvrir ce
-              domaine et d'approfondir mes connaissances. Maintenant le bac+2 en
-              développement web et web mobile obtenu, je n'ai pas envie de
-              m'arrêter là, car c'est un monde passionnant. Je recherche donc à
-              faire un bac+4 concepteur développeur d'applications en
-              apprentissage ou contrat de professionnalisation, afin d'élargir
-              mon champ de compétences dans ce domaine.
+              Passionné d'informatique depuis longtemps. J'ai réalisé une
+              formation de six mois dans le domaine du développement web. J'ai
+              découvrir pendant ma formation un domaine passionnant, mais je
+              n'ai pas envie de m'arrêter là donc si vous cherchez un
+              développeur passionné qui n'a pas peur d'apprendre je suis à votre
+              disposition.
             </p>
           </div>
         </transition>
@@ -78,5 +75,4 @@ export default {
 <style lang="scss" scoped>
 @import "../../public/style/propos.scss";
 @import "../../public/style/proposAnimation.scss";
- 
 </style>

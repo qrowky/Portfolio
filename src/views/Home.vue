@@ -21,7 +21,7 @@
        bottom:0;
        right:0;"
     >
-      Scroller Pour afficher le contenue
+      Utiliser la mollet vers le bas pour afficher le contenu
     </v-alert>
     <!-- //Social -->
     <div class="social d-flex flex-row justify-end mr-12 mt-3">
@@ -135,7 +135,7 @@
     </v-container>
 
     <div class="signature d-flex justify-end align-end mr-5 grey--text ">
-      <p>Crée par Thibault Gabillard / noyDono</p>
+      <p>Créé par Gabillard Thibault / noyDono</p>
     </div>
   </div>
 </template>

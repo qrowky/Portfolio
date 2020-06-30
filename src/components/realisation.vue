@@ -19,9 +19,8 @@
     <v-row>
       <transition name="realP">
         <p v-if="showReal" class="real--p my-5 mx-5 grey px-7 py-7">
-          The Claviste est un blog sur le theme du clavier que j'ai réaliser
-          l'or de ma formation. J'ai utiliser handelbars est materilize pour le
-          front-end et NodeJs pour le back-end
+          Description: Ce site a été realiser pour mon examin de fin de formation. <br>
+          Outils : Materilize , handlebars , jquery , javascript , nodejs , mongoDB .
           <span><v-btn class="float-right mt-5" text target="_blank" href="https://theclaviste.noydono.fr">Voir le site </v-btn></span>
         </p>
       </transition>

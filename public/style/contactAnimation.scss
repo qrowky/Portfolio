@@ -1,0 +1,54 @@
+.mail-enter-active {
+  animation: slide-in-mail 1s forwards;
+}
+.mail-leave-active {
+  animation: slide-out-mail 1s forwards;
+}
+@keyframes slide-in-mail {
+  from {
+    
+    opacity: 0;
+  }
+  to {
+    
+    opacity: 1;
+  }
+}
+@keyframes slide-out-mail {
+  from {
+  
+    opacity: 1;
+  }
+  to {
+    
+    opacity: 0;
+  }
+}
+
+.phone-enter-active {
+  animation: slide-in-phone 1s forwards;
+}
+.phone-leave-active {
+  animation: slide-out-phone 1s forwards;
+}
+@keyframes slide-in-phone {
+  from {
+    
+    opacity: 0;
+  }
+  to {
+    
+    opacity: 1;
+  }
+}
+@keyframes slide-out-phone {
+  from {
+    
+    opacity: 1;
+  }
+  to {
+    
+    opacity: 0;
+  }
+}
+

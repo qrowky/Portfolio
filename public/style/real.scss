@@ -1,0 +1,23 @@
+.real--title {
+    position: absolute !important;
+    top: 250px;
+    right: 0;
+    transform: rotate(90deg);
+    font-size: 60px;
+    z-index: 10;
+}
+.real--img{
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+.real--p {
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    max-height: 500Px;
+    width: 500Px;
+    font-size: 18Px;
+    z-index: 10;
+    box-shadow: 4px 3px 9px -4px rgba(0,0,0,0.75);
+  }

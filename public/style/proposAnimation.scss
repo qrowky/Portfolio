@@ -1,0 +1,60 @@
+/*
+ *
+ *    animation
+ *
+ *
+ * * * * * * * */
+ .div-enter-active {
+    animation: slide-in-div 0.7s forwards;
+  }
+  .div-leave-active {
+    animation: slide-out-div 0.5s forwards;
+  } 
+  @keyframes slide-in-div {
+    from {
+      right: -100vh;
+      opacity: 0;
+    }
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-div {
+    from {
+      right: 0;
+      opacity: 1;
+    }
+    to {
+      right: -100vh;
+      opacity: 0;
+    }
+  }
+
+  .img-enter-active {
+    animation: slide-in-img 0.7s forwards;
+  }
+  .img-leave-active {
+    animation: slide-out-img 0.5s forwards;
+  }
+  @keyframes slide-in-img {
+    from {
+      left: -100vh;
+      opacity: 0;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-out-img {
+    from {
+      left: 0;
+      opacity: 1;
+    }
+    to {
+      left: -100vh;
+      opacity: 0;
+    }
+  }
+  

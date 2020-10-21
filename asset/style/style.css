@@ -67,8 +67,7 @@ main::-webkit-scrollbar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  background-color: rgba(49, 48, 48, 0.8); }
+  justify-content: center; }
   .propos_container :first-child, .contact_container :first-child {
     display: flex;
     flex-direction: column;

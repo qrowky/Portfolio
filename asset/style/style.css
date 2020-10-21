@@ -83,6 +83,7 @@ main::-webkit-scrollbar {
   margin-bottom: 20px; }
 
 .contact_container {
+  background-color: rgba(49, 48, 48, 0.8);
   flex-direction: column; }
   .contact_container div {
     margin-top: 10px;

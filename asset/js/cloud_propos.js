@@ -1,5 +1,4 @@
-let scene, camera, cloudParticles = [], composer;
-var raycaster = new THREE.Raycaster();
+let scene, camera, cloudParticles = [], composer,cloud,loader;
 var mouse = new THREE.Vector2();
 
         function init() {
@@ -31,32 +30,11 @@ var mouse = new THREE.Vector2();
             renderer.setSize(window.innerWidth, window.innerHeight);
             scene.fog = new THREE.FogExp2(0x03544e, 0.00025);
             renderer.setClearColor(scene.fog.color);
-            document.querySelector('.parallax').appendChild(renderer.domElement);
+            document.querySelector('.para_propos').appendChild(renderer.domElement);
 
-            let loader = new THREE.TextureLoader();
-            loader.load("./asset/img/smoke.png", function (texture) {
-                cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
-                cloudMaterial = new THREE.MeshLambertMaterial({
-                    map: texture,
-                    transparent: true
-                });
-
-                for (let p = 0; p < 50; p++) {
-                    let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
-                    cloud.position.set(
-                        Math.random() * 800 - 400,
-                        500,
-                        Math.random() * 500 - 500
-                    );
-                    cloud.rotation.x = 1.16;
-                    cloud.rotation.y = -0.12;
-                    cloud.rotation.z = Math.random() * 2 * Math.PI;
-                    cloud.material.opacity = 0.55;
-                    cloudParticles.push(cloud);
-                    scene.add(cloud);
-                    
-                }
-            });
+    
+            loaderSmoke();
+            
 
             loader.load("./asset/img/stars.jpg", function (texture) {
 
@@ -90,15 +68,41 @@ var mouse = new THREE.Vector2();
                 window.addEventListener( 'mousemove', onMouseMove, false );
                 render();
             });
+            }
+
+        function loaderSmoke(){
+            loader = new THREE.TextureLoader();
+            loader.load("./asset/img/smoke.png", function (texture) {
+                cloudGeo = new THREE.PlaneBufferGeometry(400, 500);
+                cloudMaterial = new THREE.MeshLambertMaterial({
+                    map: texture,
+                    transparent: true
+                });
+
+                for (let p = 0; p < 30; p++) {
+                    cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
+                    cloud.position.set(
+                        Math.random() * 800 - 400,
+                        500,
+                        Math.random() * 500 - 500
+                    );
+                    cloud.rotation.x = 1.16;
+                    cloud.rotation.y = -0.12;
+                    cloud.rotation.z = Math.random() * 2 * Math.PI;
+                    cloud.material.opacity = 0.55;
+                    cloudParticles.push(cloud);
+                    scene.add(cloud);
+                    
+                }
+            });
         }
         function onMouseMove( event ) {
 
             // calculate mouse position in normalized device coordinates
             // (-1 to +1) for both components
         
-            mouse.x = event.clientX / window.innerWidth * 2 - 1;
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-            console.log(mouse.x)
         
         }
         function onWindowResize() {
@@ -109,6 +113,8 @@ var mouse = new THREE.Vector2();
         function render() {
             cloudParticles.forEach(p => {
                 p.rotation.z -= 0.001;
+                p.position.x += mouse.x
+                p.position.z += mouse.y  
             });
             composer.render(0.01);
             requestAnimationFrame(render);

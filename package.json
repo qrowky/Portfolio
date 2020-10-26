@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "essai de portfolio avec threejs",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./asset/style/sass//global.sass:./asset/style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noydono/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noydono/Portfolio/issues"
+  },
+  "homepage": "https://github.com/noydono/Portfolio#readme",
+  "dependencies": {
+    "chart.js": "^2.9.4"
+  }
+}

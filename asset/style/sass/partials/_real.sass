@@ -1,17 +1,19 @@
 .real_prese
     margin-bottom: 20px
+
 #realisation
+    & .container
+        display: flex
+        flex-direction: column
+        align-items: center
+        & .col
+            margin: 0 !important
     & .card-title
         color: $globalText
     & .card
-        height: 700px
-        overflow: hidden
-        min-width: 350px !important
         background-color: $colorCard
         & .card-content
-            height: 350px
-            & p 
-                margin-top: 35px
-   
+            & p
+                margin-top: 15px
     & .chip
         background-color: $colorChip

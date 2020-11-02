@@ -16,6 +16,15 @@ sr.reveal('.propos_content',{
     easing: 'ease'
 });
 
+sr.reveal('.propos_btn',{
+    origin: 'bottom',
+    distance: '20px',
+    duration: 4000,
+    reset: true,
+    easing: 'ease'
+});
+
+
 sr.reveal('.square_1',{
     origin: 'left',
     distance: '50px',

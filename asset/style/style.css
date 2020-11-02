@@ -765,6 +765,21 @@ body {
 .parallax-container {
   min-height: 92vh; }
 
+.propos_btn {
+  width: 300px; }
+  .propos_btn a {
+    background-color: #918d8d;
+    width: 100% !important;
+    margin-top: 20px;
+    font-family: "Sansita Swashed", cursive;
+    color: #c1edf1;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 2px;
+    transition: 2s; }
+    .propos_btn a:hover {
+      background-color: #617272; }
+
 .real_prese {
   margin-bottom: 20px; }
 

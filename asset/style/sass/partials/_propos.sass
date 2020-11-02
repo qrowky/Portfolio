@@ -1,3 +1,5 @@
+@import ../variable
+
 .propos_container
     width: 100%
     height: 100%
@@ -16,5 +18,19 @@
 
 .parallax-container
     min-height: 92vh
-    
+
+.propos_btn
+    width: 300px
+    & a 
+        background-color: $menuColor 
+        width: 100% !important
+        margin-top: 20px
+        font-family: $primaryFont
+        color: $colorBrand
+        font-size: 20px
+        padding: 5px
+        border-radius: 2px
+        transition: 2s
+        &:hover
+            background-color: #617272 
     

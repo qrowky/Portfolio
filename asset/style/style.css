@@ -765,6 +765,9 @@ body {
 .parallax-container {
   min-height: 92vh; }
 
+.propos_content {
+  color: #2e2e2e; }
+
 .propos_btn {
   width: 300px; }
   .propos_btn a {

@@ -227,6 +227,12 @@ body {
     overflow: hidden;
     margin-top: 20px;
     background-color: #918d8d; }
+    #contact #hobbie .card .card-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
   #contact #hobbie .col {
     display: flex;
     flex-direction: column;

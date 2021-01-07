@@ -22,7 +22,6 @@ let scroll_position = 0,
 
 
 function changeColorNavigation(scroll) {
-  console.log(scroll);
   if (scroll < scroll_position_about_top || (scroll >= scroll_position_works_top && scroll < scroll_position_contact_top)) {
     addPrimaryColor(aboutLink, worksLink, contactLink);
   } else if (scroll >= scroll_position_about_top || scroll < scroll_position_works_top || scroll >= scroll_position_contact_top) {

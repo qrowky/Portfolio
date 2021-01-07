@@ -40,6 +40,9 @@
   align-items: center;
   margin: 0px 0px 24px 0px;
 }
+.social i {
+  font-size: 40px;
+}
 .social a {
   margin-left: 50px;
   margin-right: 50px;
@@ -157,7 +160,7 @@
 @media (min-width: 1280px) {
   .works-theclaviste img, .works-portfolio img, .works-worldcraft img {
     z-index: -10;
-    margin-left: -129px;
+    margin-left: -209px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
@@ -169,7 +172,7 @@
     max-height: 385px;
     background-color: #2F2D2D;
     padding: 30px;
-    margin-right: 30px;
+    margin-right: 35px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
@@ -207,7 +210,7 @@
 @media (min-width: 1280px) {
   .works-worldcraft img {
     z-index: -10;
-    margin-left: -129px;
+    margin-left: -209px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
@@ -219,7 +222,7 @@
     max-height: 385px;
     background-color: #2F2D2D;
     padding: 30px;
-    margin-right: 30px;
+    margin-right: 35px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
@@ -254,7 +257,7 @@
 @media (min-width: 1280px) {
   .works-portfolio img {
     z-index: -10;
-    margin-left: -129px;
+    margin-left: -209px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
@@ -266,7 +269,7 @@
     max-height: 385px;
     background-color: #2F2D2D;
     padding: 30px;
-    margin-right: 30px;
+    margin-right: 35px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }

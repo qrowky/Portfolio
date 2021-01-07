@@ -10,17 +10,27 @@
     
 .nav-about
     padding-right: 5px
-    border-right: 1px black solid
-    border-bottom: 1px black solid
-    border-color: $mainRose
+    padding-left: 5px
+    border-right: 1px  $mainRose solid
+    border-bottom: 1px  $mainRose solid
+    transition: 1s
+    &:hover
+        background-color: #ff218c59
+        border-radius: 5px
 
 .nav-works
     @extend .nav-about
     border-color: $mainJaune
+    &:hover
+        background-color: #ffd90063
+        border-radius: 5px
 
 .nav-contact
     @extend .nav-about
     border-color: $mainBleu
+    &:hover
+        background-color: #21b1ff62
+        border-radius: 5px
 
 .primary
     color: $TextColorPrimary

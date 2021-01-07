@@ -1,39 +1,31 @@
-@import ./partials/_border, ./partials/_hobbie,./partials/_sidenav,./partials/_propos,./partials/_real, ./variable
+@import ./mixin, ./typographie, ./variable
+@import ./partials/_navigation,  ./partials/_footerSocial
+@import ./pages/Lobby, ./pages/About, ./pages/Works, ./pages/Contact
+
 
 *
-    margin: 0
     padding: 0
-p
-    font-size: $paraSize
-    font-family: $secondaryFont
-    color: $globalText
+    margin: 0
+    font-family: $mainFont
 
-h1
-    font-family: $primaryFont
-    color: $globalText
+header
+    width: 100%
+    position: fixed
+    top: 24px
 
-h2
-    @extend h1
-    font-size: 35px !important
+    
+footer
+    width: 100%
+    position: fixed
+    bottom: 0
 
-main
-    grid-area: main
-    overflow: scroll
-    -ms-overflow-style: none
-    scrollbar-width: none
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-main::-webkit-scrollbar
-    display: none
 
-strong 
-    color: $colorStrong
-    font-weight: bold
-    font-size: 16px
 
-@media only screen and (max-width: 600px)
-    body
-        display: none
-        
+ 
+    
 
+
+    
+    
     

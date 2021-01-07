@@ -7,7 +7,6 @@
     list-style: none
     & a 
         text-decoration: none             
-        color: $TextColorPrimary
     
 .nav-about
     padding-right: 5px
@@ -18,7 +17,13 @@
 .nav-works
     @extend .nav-about
     border-color: $mainJaune
-.nav-contact
 
+.nav-contact
     @extend .nav-about
     border-color: $mainBleu
+
+.primary
+    color: $TextColorPrimary
+
+.secondary
+    color: $TextColorSecondary

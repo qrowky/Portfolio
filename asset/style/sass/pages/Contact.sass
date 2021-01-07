@@ -1,4 +1,6 @@
 @import ../variable
+@import ../responsive/ContactResponsive
+
 .contact
     height: 100vh
     background-color: $bgColorGrey
@@ -7,6 +9,7 @@
     flex-direction: column
     align-items: center
     justify-content: center
+    margin-top: 40px
     & h2 
         width: 115px
         border-bottom: 3px solid $mainBleu
@@ -14,11 +17,12 @@
     & p 
         margin-top: 30px
         font-family: 'Roboto'
-        text-align: center
+        max-width: 900px
         margin-left: 40px
         margin-right: 40px
-        max-width: 900px
     & .phone
-        margin-top: 25px
+        margin-top: 25px 
     & .mail
-        margin-top: 10px       
+        margin-top: 10px  
+    @include contact_responsive
+               

@@ -1,4 +1,5 @@
 @import ../variable
+@import ../responsive/AboutResponsive
 .about
     height: 100vh
     background-color: $bgColorGrey
@@ -10,9 +11,12 @@
     & h2 
         width: 75px
         border-bottom: 3px solid $mainRose
-        margin-bottom: 20px
+        margin-bottom: 20px   
     & p 
         font-family: 'Roboto'
+        max-width: 900px
         margin-left: 40px
         margin-right: 40px
-        max-width: 900px
+    @include about-responsive
+    
+        

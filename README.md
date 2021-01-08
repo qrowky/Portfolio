@@ -1,4 +1,3 @@
-# Portfolio
-Portoflio en travaux 
+# Portfolio 
 https://noydono.github.io/Portfolio/
 

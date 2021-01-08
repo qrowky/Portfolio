@@ -143,16 +143,15 @@
   margin: 40px 10px 20px 10px;
   border-radius: 2px;
   max-width: 863px;
-  max-height: 807px;
+  max-height: 820px;
 }
 .works-theclaviste h3, .works-portfolio h3, .works-worldcraft h3 {
-  margin: 20px;
+  margin: 20px 20px 0px 20px;
 }
 .works-theclaviste p, .works-portfolio p, .works-worldcraft p {
   font-family: "Roboto";
   margin-left: 40px;
   margin-right: 40px;
-  margin-bottom: 30px;
   max-width: 900px;
 }
 @media (min-width: 768px) {
@@ -195,6 +194,9 @@
   .works-theclaviste .works-theclaviste-content p, .works-portfolio .works-theclaviste-content p, .works-worldcraft .works-theclaviste-content p {
     font-size: 18px;
   }
+}
+.works-theclaviste .voirCode, .works-portfolio .voirCode, .works-worldcraft .voirCode {
+  margin: 20px;
 }
 @media (min-width: 1440px) {
   .works-theclaviste img, .works-portfolio img, .works-worldcraft img {
@@ -246,6 +248,9 @@
     font-size: 18px;
   }
 }
+.works-worldcraft .voirCode {
+  margin: 20px;
+}
 @media (min-width: 1440px) {
   .works-worldcraft img {
     margin-left: -280px;
@@ -293,6 +298,9 @@
     font-size: 18px;
   }
 }
+.works-portfolio .voirCode {
+  margin: 20px;
+}
 @media (min-width: 1440px) {
   .works-portfolio img {
     margin-left: -280px;
@@ -300,6 +308,8 @@
 }
 
 .voirCode {
+  display: inline-block;
+  margin: 5px;
   padding: 5px;
   background-color: #FFD800;
   border-radius: 2px;

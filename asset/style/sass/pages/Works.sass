@@ -19,32 +19,43 @@
     color: $TextColorSecondary
     margin: 40px 10px 20px 10px
     border-radius: 2px
-    max-width: 863px
     max-height: 820px
-    & h3
-        margin: 20px 20px 0px 20px
     & p
         font-family: 'Roboto'
         margin-left: 40px
         margin-right: 40px
         max-width: 900px
+        font-size: 18px
+    & h3
+        padding: 20px 0px 10px 0px
+        margin: 0px 0px 0px 20px
+        font-size: 36px
+    & .works-theclaviste-content
+        margin-top: -10px
+        background-color: $bgColorGrey
     @include works-content_responsive("theclaviste")
     
 
 .works-worldcraft
     @extend .works-theclaviste
     margin-top: 100px
+    & .works-worldcraft-content
+        margin-top: -10px
+        background-color: $bgColorGrey
     @include works-content_responsive("worldcraft")
     
 
 .works-portfolio
     @extend .works-theclaviste
+    & .works-portfolio-content
+        margin-top: -10px
+        background-color: $bgColorGrey
     @include works-content_responsive("portfolio")
 
 
 .voirCode
     display: inline-block
-    margin: 5px
+    margin: 20px
     padding: 5px
     background-color: $mainJaune
     border-radius: 2px

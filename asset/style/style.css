@@ -127,7 +127,8 @@
 @media (min-width: 1280px) {
   .works {
     align-items: flex-end;
-    margin-right: 229px;
+    margin-right: 10%;
+    margin-left: 10%;
   }
 }
 @media (min-width: 1280px) {
@@ -142,17 +143,23 @@
   color: #C3B8B8;
   margin: 40px 10px 20px 10px;
   border-radius: 2px;
-  max-width: 863px;
   max-height: 820px;
-}
-.works-theclaviste h3, .works-portfolio h3, .works-worldcraft h3 {
-  margin: 20px 20px 0px 20px;
 }
 .works-theclaviste p, .works-portfolio p, .works-worldcraft p {
   font-family: "Roboto";
   margin-left: 40px;
   margin-right: 40px;
   max-width: 900px;
+  font-size: 18px;
+}
+.works-theclaviste h3, .works-portfolio h3, .works-worldcraft h3 {
+  padding: 20px 0px 10px 0px;
+  margin: 0px 0px 0px 20px;
+  font-size: 36px;
+}
+.works-theclaviste .works-theclaviste-content, .works-portfolio .works-theclaviste-content, .works-worldcraft .works-theclaviste-content {
+  margin-top: -10px;
+  background-color: #2F2D2D;
 }
 @media (min-width: 768px) {
   .works-theclaviste, .works-portfolio, .works-worldcraft {
@@ -164,49 +171,79 @@
     max-width: 700px;
   }
 }
-@media (max-width: 1279px) {
-  .works-theclaviste, .works-portfolio, .works-worldcraft {
-    background-color: #2F2D2D;
-  }
-}
 @media (min-width: 1280px) {
+  .works-theclaviste, .works-portfolio, .works-worldcraft {
+    max-width: 100%;
+    box-shadow: none;
+  }
   .works-theclaviste img, .works-portfolio img, .works-worldcraft img {
-    z-index: -10;
-    margin-left: -209px;
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    z-index: -1;
+    max-width: 800px;
+    max-height: 400px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
   .works-theclaviste .works-theclaviste-content, .works-portfolio .works-theclaviste-content, .works-worldcraft .works-theclaviste-content {
     display: inline-block;
-    z-index: 0;
-    margin-top: -260px;
-    max-width: 801px;
-    max-height: 385px;
-    background-color: #2F2D2D;
-    padding: 30px;
-    margin-right: 35px;
+    z-index: 10;
+    margin-top: 200px;
+    max-width: 800px;
+    max-height: 400px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
   .works-theclaviste .works-theclaviste-content h3, .works-portfolio .works-theclaviste-content h3, .works-worldcraft .works-theclaviste-content h3 {
+    padding: 20px 0px 10px 20px;
+    margin: 0px 0px 0px 5px;
     font-size: 36px;
   }
   .works-theclaviste .works-theclaviste-content p, .works-portfolio .works-theclaviste-content p, .works-worldcraft .works-theclaviste-content p {
     font-size: 18px;
   }
+  .works-theclaviste .voirCode, .works-portfolio .voirCode, .works-worldcraft .voirCode {
+    margin-right: 20px;
+  }
 }
-.works-theclaviste .voirCode, .works-portfolio .voirCode, .works-worldcraft .voirCode {
-  margin: 20px;
-}
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .works-theclaviste img, .works-portfolio img, .works-worldcraft img {
-    margin-left: -280px;
+    display: inline-block;
+    position: absolute;
+    left: 15%;
+    z-index: -1;
+    max-width: 900px;
+    max-height: 450px;
+    -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
+  }
+  .works-theclaviste .works-theclaviste-content, .works-portfolio .works-theclaviste-content, .works-worldcraft .works-theclaviste-content {
+    display: inline-block;
+    z-index: 10;
+    margin-top: 150px;
+    margin-right: 10%;
+    max-width: 1000px;
+    height: 100vw;
+  }
+  .works-theclaviste .works-theclaviste-content h3, .works-portfolio .works-theclaviste-content h3, .works-worldcraft .works-theclaviste-content h3 {
+    padding: 20px 0px 10px 20px;
+    margin: 0px 0px 0px 5px;
+    font-size: 36px;
+  }
+  .works-theclaviste .works-theclaviste-content p, .works-portfolio .works-theclaviste-content p, .works-worldcraft .works-theclaviste-content p {
+    font-size: 18px;
+    max-width: 800px;
   }
 }
 
 .works-worldcraft {
   margin-top: 100px;
 }
+.works-worldcraft .works-worldcraft-content {
+  margin-top: -10px;
+  background-color: #2F2D2D;
+}
 @media (min-width: 768px) {
   .works-worldcraft {
     max-width: 550px;
@@ -217,46 +254,76 @@
     max-width: 700px;
   }
 }
-@media (max-width: 1279px) {
-  .works-worldcraft {
-    background-color: #2F2D2D;
-  }
-}
 @media (min-width: 1280px) {
+  .works-worldcraft {
+    max-width: 100%;
+    box-shadow: none;
+  }
   .works-worldcraft img {
-    z-index: -10;
-    margin-left: -209px;
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    z-index: -1;
+    max-width: 800px;
+    max-height: 400px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
   .works-worldcraft .works-worldcraft-content {
     display: inline-block;
-    z-index: 0;
-    margin-top: -260px;
-    max-width: 801px;
-    max-height: 385px;
-    background-color: #2F2D2D;
-    padding: 30px;
-    margin-right: 35px;
+    z-index: 10;
+    margin-top: 200px;
+    max-width: 800px;
+    max-height: 400px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
   .works-worldcraft .works-worldcraft-content h3 {
+    padding: 20px 0px 10px 20px;
+    margin: 0px 0px 0px 5px;
     font-size: 36px;
   }
   .works-worldcraft .works-worldcraft-content p {
     font-size: 18px;
   }
+  .works-worldcraft .voirCode {
+    margin-right: 20px;
+  }
 }
-.works-worldcraft .voirCode {
-  margin: 20px;
-}
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .works-worldcraft img {
-    margin-left: -280px;
+    display: inline-block;
+    position: absolute;
+    left: 15%;
+    z-index: -1;
+    max-width: 900px;
+    max-height: 450px;
+    -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
+  }
+  .works-worldcraft .works-worldcraft-content {
+    display: inline-block;
+    z-index: 10;
+    margin-top: 150px;
+    margin-right: 10%;
+    max-width: 1000px;
+    height: 100vw;
+  }
+  .works-worldcraft .works-worldcraft-content h3 {
+    padding: 20px 0px 10px 20px;
+    margin: 0px 0px 0px 5px;
+    font-size: 36px;
+  }
+  .works-worldcraft .works-worldcraft-content p {
+    font-size: 18px;
+    max-width: 800px;
   }
 }
 
+.works-portfolio .works-portfolio-content {
+  margin-top: -10px;
+  background-color: #2F2D2D;
+}
 @media (min-width: 768px) {
   .works-portfolio {
     max-width: 550px;
@@ -267,49 +334,75 @@
     max-width: 700px;
   }
 }
-@media (max-width: 1279px) {
-  .works-portfolio {
-    background-color: #2F2D2D;
-  }
-}
 @media (min-width: 1280px) {
+  .works-portfolio {
+    max-width: 100%;
+    box-shadow: none;
+  }
   .works-portfolio img {
-    z-index: -10;
-    margin-left: -209px;
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    z-index: -1;
+    max-width: 800px;
+    max-height: 400px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
   .works-portfolio .works-portfolio-content {
     display: inline-block;
-    z-index: 0;
-    margin-top: -260px;
-    max-width: 801px;
-    max-height: 385px;
-    background-color: #2F2D2D;
-    padding: 30px;
-    margin-right: 35px;
+    z-index: 10;
+    margin-top: 200px;
+    max-width: 800px;
+    max-height: 400px;
     -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
     box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
   }
   .works-portfolio .works-portfolio-content h3 {
+    padding: 20px 0px 10px 20px;
+    margin: 0px 0px 0px 5px;
     font-size: 36px;
   }
   .works-portfolio .works-portfolio-content p {
     font-size: 18px;
   }
+  .works-portfolio .voirCode {
+    margin-right: 20px;
+  }
 }
-.works-portfolio .voirCode {
-  margin: 20px;
-}
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .works-portfolio img {
-    margin-left: -280px;
+    display: inline-block;
+    position: absolute;
+    left: 15%;
+    z-index: -1;
+    max-width: 900px;
+    max-height: 450px;
+    -webkit-box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 7px 6px 18px 0px rgba(0, 0, 0, 0.7);
+  }
+  .works-portfolio .works-portfolio-content {
+    display: inline-block;
+    z-index: 10;
+    margin-top: 150px;
+    margin-right: 10%;
+    max-width: 1000px;
+    height: 100vw;
+  }
+  .works-portfolio .works-portfolio-content h3 {
+    padding: 20px 0px 10px 20px;
+    margin: 0px 0px 0px 5px;
+    font-size: 36px;
+  }
+  .works-portfolio .works-portfolio-content p {
+    font-size: 18px;
+    max-width: 800px;
   }
 }
 
 .voirCode {
   display: inline-block;
-  margin: 5px;
+  margin: 20px;
   padding: 5px;
   background-color: #FFD800;
   border-radius: 2px;
@@ -381,6 +474,7 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins";
+  transition: 1.5s;
 }
 
 header {

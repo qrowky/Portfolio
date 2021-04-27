@@ -55,8 +55,8 @@ function setCamera() {
     0.1,
     4000
   );
-  camera.position.y = 500;
-  camera.position.x = 200;
+  camera.position.y = 100;
+  camera.position.x = 0;
   controls = new PointerLockControls(camera, document.body);
 
   var blocker = document.getElementById("blocker");
@@ -235,9 +235,9 @@ function animate() {
 
     controls.getObject().position.y += velocity.y * delta; // new behavior
 
-    if (controls.getObject().position.y < 10) {
+    if (controls.getObject().position.y < 100) {
       velocity.y = 0;
-      controls.getObject().position.y = 10;
+      controls.getObject().position.y = 100;
 
       canJump = true;
     }

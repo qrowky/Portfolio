@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <ul class="navbar-list">
+        <li class="navbar-list-item navigation" (click)="toggle()">
+            <div class="burger" [@openCloseBurger]="isOpen ? 'open' : 'closed'" >
+                <span class="burger__one"></span>
+                <span class="burger__two"></span>
+                <span class="burger__three"></span>
+            </div>
+            <span class="navbar-list-item-text">Menu</span>
+            </li>
+        <li class="navbar-list-item"><span class="navbar-list-item-text">Thibault Gabillard</span></li>
+    </ul>
+</nav>
+
+<div class="sidemenu" [@openCloseSidemenu]="isOpen ? 'open' : 'closed'">
+
+</div>

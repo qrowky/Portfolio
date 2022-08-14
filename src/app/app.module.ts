@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CubeComponent } from './cube/cube.component';
+import {CommonsModule} from "./commons/commons.module";
+import {HomeComponent} from "./pages/home/home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    CubeComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,46 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from "@angular/animations";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { burgerOnOffBottom, burgerOnOffMiddle, burgerOnOffTop, navigationTextOnOff} from "./navigation-animation";
+import {MenuState} from "../../../app.component";
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.sass'],
-  animations: [
-      trigger('openCloseBurger', [
-        state('open', style({
-
-        })),
-        state('closed', style({
-          height: '100px',
-          opacity: 0.8,
-          backgroundColor: 'blue'
-        })),
-        transition('open => closed', [
-          animate('1s')
-        ]),
-        transition('closed => open', [
-          animate('0.5s')
-        ]),
-      ]),
-      trigger('openCloseSideMenu', [
-      state('open', style({})),
-      state('closed', style({
-        height: '100px',
-        opacity: 0.8,
-        backgroundColor: 'blue'
-      })),
-      transition('open => closed', [ animate('1s') ]),
-      transition('closed => open', [ animate('0.5s') ]),
-    ])
-  ]
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.sass'],
+    animations: [burgerOnOffTop, burgerOnOffMiddle, burgerOnOffBottom, navigationTextOnOff]
 })
-export class NavbarComponent{
+export class NavbarComponent implements OnInit {
+    @Input() menuState?: MenuState
+    @Output() menuStateChange = new EventEmitter<MenuState>()
 
-  isOpen = true;
+    constructor() {
+    }
 
-  constructor() { }
+    ngOnInit(): void {
+    }
 
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
+    toggle() {
+        this.menuStateChange.emit(this.menuState === 'close' ? 'open' : 'close');
+    }
 }

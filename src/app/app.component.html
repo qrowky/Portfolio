@@ -1,8 +1,9 @@
-<div class>
-    <header>
-        <app-navbar></app-navbar>
-    </header>
-    <main>
-        <router-outlet></router-outlet>
-    </main>
-</div>
+<app-navbar [(menuState)]="menuState" ></app-navbar>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<app-sidemenu [menuState]="menuState" [@slideInOut]="menuState"></app-sidemenu>
+
+

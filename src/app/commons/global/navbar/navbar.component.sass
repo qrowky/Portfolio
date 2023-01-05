@@ -1,75 +1,37 @@
 .navbar
-  width: 95%
+  width: 100%
+  height: 10%
   position: fixed
-  top: 25px
-  left: 50px
-  z-index: 100
+  bottom: 0px
+  left: 0px
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
   &-list
+    width: 100%
     display: flex
     justify-content: space-between
     align-items: center
     list-style: none
+    margin: 0 20px
     &-item
-      display: flex
-      justify-content: space-between
-      align-items: center
-      &_navigation
-        height: 40px
-        width: 120px
-        border-radius: 20px
-        border: 1px solid var(--color-light)
-        padding: 6px 21px
-        font-size: 0.8rem
-        font-weight: 500
-        letter-spacing: 0.5px
-        cursor: pointer
-        overflow: hidden
-        &-burger
-          height: 13px
-          width: 23px
-          display: flex
-          flex-direction: column
-          justify-content: center
-          align-items: center
-          margin: 5px
-          gap: 3px
-          &__one, &__two, &__three
-            height: 1px
-            width: 15px
-        &-text
-          height: 36px
-          &_span
-            height: 36px
-            display: flex
-            justify-content: center
-            align-items: center
-            font-family: 'Poppins', sans-serif
-        &.dark
-          border-color: var(--color-dark)
-          &:hover
-            background-color: var(--color-light-transparent)
-          & .navbar-list-item_navigation-burger
-              &__one, &__two, &__three
-                background-color: var(--color-dark)
-          & .navbar-list-item_navigation-text
-            &_span
-              color: var(--text-dark)
-        &.light
-          border-color: var(--color-light)
-          &:hover
-            background-color: var(--color-light-transparent)
-          & .navbar-list-item_navigation-burger
-            &__one, &__two, &__three
-              background-color: var(--color-light)
-          & .navbar-list-item_navigation-text
-            &_span
-              color: var(--text-light)
-      &-text
-        display: flex
-        justify-content: center
-        align-items: center
-        font-family: 'Poppins', sans-serif
-        &.dark
-          color: var(--text-dark)
-        &.light
-          color: var(--text-light)
+      width: 100%
+      position: relative
+      font-family: poppins
+      font-size: 16px
+      color: rgba(71, 71, 71, 0.671)
+      cursor: pointer
+      &::before
+        content: ' '
+        height: 1.5px
+        width: 90%
+        background-color: rgba(110, 108, 108, 0.322)
+        position: absolute
+        top: 0
+        left: 0
+      &:hover
+        color: rgba(68, 67, 67, 0.842)
+        transition: color .5s
+        
+
+

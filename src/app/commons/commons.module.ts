@@ -10,7 +10,7 @@ import { CanvasComponent } from './global/canvas/canvas.component';
   declarations: [
       NavbarComponent,
       GlitchComponent,
-      CanvasComponent
+      CanvasComponent,
   ],
   imports: [
     CommonModule,
@@ -19,7 +19,7 @@ import { CanvasComponent } from './global/canvas/canvas.component';
   ],
     exports: [
         NavbarComponent,
-        CanvasComponent
+        CanvasComponent,
     ]
 })
 export class CommonsModule { }

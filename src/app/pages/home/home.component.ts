@@ -14,17 +14,6 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
-    const options = {
-      strings: ['FullStack','Angular', 'Java', 'Groovy', 'Nodejs'],
-      typeSpeed: 100,
-      backSpeed: 100,
-      showCursor: true,
-      cursorChar: '|',
-      loop: true
-    };
-    
-    const typed = new Typed('.typed-element', options);  
 
   }
 

@@ -18,7 +18,6 @@ export class CanvasComponent implements OnInit {
 
     cube ?: Array<THREE.Mesh<THREE.BoxGeometry, THREE.MeshBasicMaterial>> = []
 
-
     constructor() {
     }
 
@@ -40,44 +39,20 @@ export class CanvasComponent implements OnInit {
             this.scene!.add(this.cube![i]);
         }
 
-        // const matFloor = new THREE.MeshPhongMaterial({color: 0x808080});
-        // const geoFloor = new THREE.PlaneGeometry(100, 100);
-        // const mshFloor = new THREE.Mesh(geoFloor, matFloor);
-        // mshFloor.rotation.x = -Math.PI * 0.5;
-        // mshFloor.receiveShadow = true;
-        // mshFloor.position.set(0, 0, 0);
-        // this.scene!.add(mshFloor);
-
         this.camera!.position.set(9, 5, 5);
 
         const light = new THREE.SpotLight(0xf0f0f0, 2);
         light.position.set(10, 10, 3);
-        light.castShadow = true;
-        light.angle = 0.3;
-        light.penumbra = 0.2;
-        light.decay = 2;
-        light.distance = 50;
-        light.angle = 0.3;
-        light.penumbra = 0.2;
-        light.decay = 2;
-        light.distance = 50;
-        this.scene!.add(light);
-        //
-        // const spotLightHelper = new THREE.SpotLightHelper(light);
-        // this.scene!.add(spotLightHelper);
-
-        // const helper = new THREE.GridHelper(50, 50);
-        // helper.position.y = -10;
-        // this.scene!.add(helper);
+        light.castShadow = true
+        light.angle = 0.3
+        this.scene!.add(light)
 
         this.controls = new OrbitControls(this.camera!, this.renderer!.domElement);
         this.animate()
-
     }
 
     private createScene() {
         this.scene = new THREE.Scene();
-
     }
 
     private initCamera() {

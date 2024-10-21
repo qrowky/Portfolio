@@ -4,11 +4,13 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { NavbarComponent } from './global/navbar/navbar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { GlitchComponent } from './ui/glitch/glitch.component';
+import { CanvasComponent } from './global/canvas/canvas.component';
 
 @NgModule({
   declarations: [
       NavbarComponent,
-      GlitchComponent
+      GlitchComponent,
+      CanvasComponent
   ],
   imports: [
     CommonModule,
@@ -17,6 +19,7 @@ import { GlitchComponent } from './ui/glitch/glitch.component';
   ],
     exports: [
         NavbarComponent,
+        CanvasComponent
     ]
 })
 export class CommonsModule { }

@@ -5,12 +5,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.sass']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
     constructor() {
     }
 
-    ngOnInit(): void {
-        console.log('coucou');
-        
-    }
 }
